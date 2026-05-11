@@ -1,0 +1,8 @@
+name = "meta-sapiens-hub"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "meta_sapiens_db"
+database_name = "meta-sapiens-db"
+database_id = "2b9c08ea-71c5-46f3-9f58-f4c398bc65c7"
