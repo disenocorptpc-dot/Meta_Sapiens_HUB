@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #0F1117;
+    color: #F0F0F0;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0F1117;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A2D3A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6C63FF;
+  }
+  ::selection {
+    background: #6C63FF44;
+    color: #F0F0F0;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card border border-border rounded-xl p-4;
+  }
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2;
+  }
+  .btn-ghost {
+    @apply bg-transparent hover:bg-border text-text-sec hover:text-text-main px-3 py-1.5 rounded-lg text-sm transition-all duration-200 flex items-center gap-2;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .input {
+    @apply bg-bg border border-border rounded-lg px-3 py-2 text-text-main text-sm w-full focus:outline-none focus:border-accent transition-colors;
+  }
+  .textarea {
+    @apply bg-bg border border-border rounded-lg px-3 py-2 text-text-main text-sm w-full focus:outline-none focus:border-accent transition-colors resize-none;
+  }
+  .select {
+    @apply bg-bg border border-border rounded-lg px-3 py-2 text-text-main text-sm w-full focus:outline-none focus:border-accent transition-colors;
+  }
+  .section-title {
+    @apply text-xl font-bold text-text-main flex items-center gap-3;
+  }
+  .label {
+    @apply text-xs font-medium text-text-sec uppercase tracking-wider;
+  }
+}
+
+.sidebar-item {
+  @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer;
+}
+.sidebar-item:hover {
+  @apply bg-border text-text-main;
+}
+.sidebar-item.active {
+  @apply bg-accent/20 text-accent border-l-2 border-accent;
+}
+.sidebar-item.inactive {
+  @apply text-text-sec;
+}
+
+.countdown-digit {
+  @apply flex flex-col items-center;
+}
+.countdown-digit .num {
+  @apply text-5xl font-extrabold text-accent tabular-nums leading-none;
+  text-shadow: 0 0 20px rgba(108, 99, 255, 0.4);
+}
+.countdown-digit .lbl {
+  @apply text-xs text-text-sec uppercase tracking-widest mt-1;
+}
+
+.phase-bar {
+  @apply h-2 rounded-full transition-all duration-500;
+}
+
+.progress-track {
+  @apply bg-border rounded-full overflow-hidden h-2;
+}
+
+.sticky-note {
+  @apply relative p-3 rounded-lg border text-sm;
+}
+
+.prompt-card {
+  @apply card hover:border-accent/40 transition-all duration-200;
+}
+
+.modal-backdrop {
+  @apply fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+}
+.modal {
+  @apply bg-card border border-border rounded-2xl p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto animate-fade-in;
+}
+
+.rules-banner {
+  background: linear-gradient(90deg, rgba(255, 71, 87, 0.12) 0%, rgba(255, 71, 87, 0.06) 100%);
+  border-left: 3px solid #FF4757;
+}
+
+.glow-accent {
+  box-shadow: 0 0 30px rgba(108, 99, 255, 0.15);
+}
+
+.header-gradient {
+  background: linear-gradient(180deg, #1A1D27 0%, rgba(26, 29, 39, 0.95) 100%);
+}
